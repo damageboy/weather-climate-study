@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 1 – Weather vs Climate &amp; Instruments</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-day="day1">
+
+<nav>
+  <a class="logo" href="index.html">🌤 Weather &amp; Climate</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="day1.html">Day 1</a>
+    <a href="day2.html">Day 2</a>
+    <a href="day3.html">Day 3</a>
+    <a href="day4.html">Day 4</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="day-badge" style="background:var(--day1)">Day 1</span>
+  <h1>Weather vs Climate &amp; Measuring the Weather</h1>
+  <p>Learn how scientists measure the weather — and how weather differs from climate.</p>
+  <div style="max-width:400px;margin:16px auto 0;background:#ddd;border-radius:6px;height:10px;overflow:hidden">
+    <div class="day-progress-fill" style="height:100%;width:0%;background:var(--day1);border-radius:6px;transition:width 0.5s"></div>
+  </div>
+  <p style="font-size:0.85rem;color:#888;margin-top:4px">Progress: <span class="day-progress-pct">0%</span></p>
+</div>
+
+<div class="container">
+
+  <div class="section-title"><span class="icon">📖</span> Learn</div>
+
+  <div class="definition-box" style="border-color:var(--day1)">
+    <h3>Weather</h3>
+    <p>Weather is the state of the atmosphere at a <strong>given time</strong>. It can change from hour to hour. Examples: rainy, sunny, windy, foggy.</p>
+  </div>
+  <div class="definition-box" style="border-color:var(--sky-dark)">
+    <h3>Climate</h3>
+    <p>Climate is the <strong>average weather</strong> in a place over a long period (usually 30 years). It changes much more slowly than weather.</p>
+  </div>
+
+  <div class="section-title"><span class="icon">🌡</span> Measuring Instruments</div>
+
+  <div class="card-grid">
+    <div class="info-card">
+      <div class="card-icon">🌡️</div>
+      <h3>Thermometer</h3>
+      <p>Measures <strong>temperature</strong>. Kept in a <em>Stevenson screen</em> (shaded white box). <strong>Sited</strong>: 1.2 m above ground, away from buildings.</p>
+      <span class="unit">°C (degrees Celsius)</span>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">💨</div>
+      <h3>Anemometer</h3>
+      <p>Measures <strong>wind speed</strong>. Cups spin in the wind. <strong>Sited</strong>: high up in the open, away from trees and buildings.</p>
+      <span class="unit">mph or km/h</span>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">🔵</div>
+      <h3>Barometer</h3>
+      <p>Measures <strong>air pressure</strong>. If pressure falls → rain coming. If pressure rises → fair weather. <strong>Sited</strong>: indoors or in a screen.</p>
+      <span class="unit">millibars (mb)</span>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">🐓</div>
+      <h3>Wind Vane</h3>
+      <p>Measures <strong>wind direction</strong>. Points into the wind. "SW wind" means wind <em>from</em> the south-west. <strong>Sited</strong>: high, open location.</p>
+      <span class="unit">Compass bearing (N, NE, SW…)</span>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">🌧️</div>
+      <h3>Rain Gauge</h3>
+      <p>Measures <strong>precipitation</strong> (rain, hail, snow). <strong>Sited</strong>: outdoors, flush with ground level, away from trees.</p>
+      <span class="unit">millimetres (mm)</span>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">👁️</div>
+      <h3>Visibility Meter</h3>
+      <p>Measures <strong>visibility</strong> — how far you can see. A beam of light is sent out and a sensor measures how much arrives. <strong>Sited</strong>: open area.</p>
+      <span class="unit">metres or kilometres</span>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="icon">🧩</span> Practice</div>
+
+  <div class="activity" id="dnd1">
+    <h2>🔗 Match the Instrument</h2>
+    <p class="instructions">Drag each instrument name onto the correct "what it measures" box.</p>
+    <div class="dnd-area">
+      <div class="dnd-chips">
+        <div class="chip" data-chip="thermometer" draggable="true">Thermometer</div>
+        <div class="chip" data-chip="anemometer" draggable="true">Anemometer</div>
+        <div class="chip" data-chip="barometer" draggable="true">Barometer</div>
+        <div class="chip" data-chip="wind-vane" draggable="true">Wind Vane</div>
+        <div class="chip" data-chip="rain-gauge" draggable="true">Rain Gauge</div>
+        <div class="chip" data-chip="vis-meter" draggable="true">Visibility Meter</div>
+      </div>
+      <div class="dnd-targets">
+        <div class="dnd-target"><span class="target-label">Temperature (°C)</span><div class="drop-zone" data-target="thermometer">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Wind speed (mph)</span><div class="drop-zone" data-target="anemometer">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Air pressure (mb)</span><div class="drop-zone" data-target="barometer">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Wind direction</span><div class="drop-zone" data-target="wind-vane">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Precipitation (mm)</span><div class="drop-zone" data-target="rain-gauge">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Visibility (km)</span><div class="drop-zone" data-target="vis-meter">drop here</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity" id="fc1">
+    <h2>🃏 Flashcards</h2>
+    <p class="instructions">Click each card to flip it and reveal the answer. Use the arrows to move between cards.</p>
+    <div class="flashcard-deck">
+      <div class="flashcard-viewport">
+        <div class="flashcard-wrap">
+          <div class="flashcard">
+            <div class="flashcard-front"><span></span></div>
+            <div class="flashcard-back"><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flashcard-nav">
+        <button class="btn btn-primary btn-prev">← Prev</button>
+        <span class="fc-counter">1 / 8</span>
+        <button class="btn btn-primary btn-next">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="icon">✏️</span> Test Yourself</div>
+
+  <div class="activity" id="fitb1">
+    <h2>✍️ Fill in the Blanks</h2>
+    <p class="instructions">Type the missing word(s) in each gap, then press Check.</p>
+    <div class="fitb-list">
+      <div class="fitb-item">Weather is the state of the atmosphere at a <input class="fitb-input" data-answer="given time" placeholder="???"> whereas climate is the <input class="fitb-input" data-answer="average" placeholder="???"> weather over a long period.</div>
+      <div class="fitb-item">A <input class="fitb-input" data-answer="thermometer" placeholder="???"> measures temperature in <input class="fitb-input" data-answer="°C/degrees Celsius" placeholder="???">.</div>
+      <div class="fitb-item">Wind speed is measured by an <input class="fitb-input" data-answer="anemometer" placeholder="???"> in miles per hour or <input class="fitb-input" data-answer="km/h" placeholder="???">.</div>
+      <div class="fitb-item">Air pressure is measured in <input class="fitb-input" data-answer="millibars" placeholder="???"> using a <input class="fitb-input" data-answer="barometer" placeholder="???">.</div>
+      <div class="fitb-item">A rain gauge measures <input class="fitb-input" data-answer="precipitation" placeholder="???"> and is sited <input class="fitb-input" data-answer="flush with/at" placeholder="???"> ground level.</div>
+      <div class="fitb-item">Wind direction is measured as a compass bearing using a <input class="fitb-input" data-answer="wind vane" placeholder="???">. A south-westerly wind blows <strong>from</strong> the <input class="fitb-input" data-answer="south-west/SW" placeholder="???">.</div>
+    </div>
+    <div class="btn-row"><button class="btn btn-primary btn-check">Check answers</button></div>
+  </div>
+
+  <div class="activity" id="quiz1">
+    <h2>❓ Quick Quiz</h2>
+    <p class="instructions">Click the correct answer for each question.</p>
+
+    <div class="quiz-question" data-q="0">
+      <div class="q-text">1. What is the difference between weather and climate?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Weather is long-term; climate is short-term</button>
+        <button class="quiz-option">Weather is the state of the atmosphere right now; climate is average weather over time</button>
+        <button class="quiz-option">They mean exactly the same thing</button>
+        <button class="quiz-option">Climate is measured with a thermometer; weather is not</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="1">
+      <div class="q-text">2. Which instrument measures air pressure?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Anemometer</button>
+        <button class="quiz-option">Thermometer</button>
+        <button class="quiz-option">Barometer</button>
+        <button class="quiz-option">Rain gauge</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="2">
+      <div class="q-text">3. In what unit is air pressure measured?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Millimetres (mm)</button>
+        <button class="quiz-option">Millibars (mb)</button>
+        <button class="quiz-option">Degrees Celsius (°C)</button>
+        <button class="quiz-option">Oktas</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="3">
+      <div class="q-text">4. Where should a rain gauge be sited?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">On the roof of a building</button>
+        <button class="quiz-option">Inside a warm room</button>
+        <button class="quiz-option">Flush with ground level, away from trees</button>
+        <button class="quiz-option">At the top of a hill</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="4">
+      <div class="q-text">5. What does an anemometer measure?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Temperature</button>
+        <button class="quiz-option">Rainfall</button>
+        <button class="quiz-option">Wind direction</button>
+        <button class="quiz-option">Wind speed</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="5">
+      <div class="q-text">6. A "south-westerly wind" blows FROM which direction?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">The north-east</button>
+        <button class="quiz-option">The south-west</button>
+        <button class="quiz-option">The north-west</button>
+        <button class="quiz-option">The south-east</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;margin-top:30px">
+    <a href="day2.html" class="btn btn-success">Next: Day 2 →</a>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+<script>
+const D1_PAIRS = [
+  { chip: 'thermometer', target: 'thermometer' },
+  { chip: 'anemometer',  target: 'anemometer'  },
+  { chip: 'barometer',   target: 'barometer'   },
+  { chip: 'wind-vane',   target: 'wind-vane'   },
+  { chip: 'rain-gauge',  target: 'rain-gauge'  },
+  { chip: 'vis-meter',   target: 'vis-meter'   },
+];
+initDragDrop('dnd1', D1_PAIRS, 'day1', 'dnd');
+
+const D1_CARDS = [
+  { front: 'Thermometer', back: 'Measures temperature in °C. Kept in a Stevenson screen, 1.2 m above ground.' },
+  { front: 'Anemometer',  back: 'Measures wind speed in mph or km/h. Sited high up in the open.' },
+  { front: 'Barometer',   back: 'Measures air pressure in millibars (mb). Falling pressure = rain on the way.' },
+  { front: 'Wind Vane',   back: 'Measures wind direction as a compass bearing. A SW wind blows FROM the south-west.' },
+  { front: 'Rain Gauge',  back: 'Measures precipitation in millimetres (mm). Sited flush with ground level.' },
+  { front: 'Visibility Meter', back: 'Measures how far you can see, in metres or km.' },
+  { front: 'What is weather?', back: 'The state of the atmosphere at a given moment in time.' },
+  { front: 'What is climate?', back: 'The average weather in a place over a long period (usually 30 years).' },
+];
+initFlashcards('fc1', D1_CARDS, 'day1', 'flashcards');
+initFitb('fitb1', 'day1', 'fitb');
+
+const D1_Q = [
+  { q:'', options:[], answer: 1 },
+  { q:'', options:[], answer: 2 },
+  { q:'', options:[], answer: 1 },
+  { q:'', options:[], answer: 2 },
+  { q:'', options:[], answer: 3 },
+  { q:'', options:[], answer: 1 },
+];
+initQuiz('quiz1', D1_Q, 'day1', 'quiz');
+</script>
+</body>
+</html>

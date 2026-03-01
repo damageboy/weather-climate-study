@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather & Climate Study</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-day="home">
+
+<nav>
+  <a class="logo" href="index.html">🌤 Weather &amp; Climate</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="day1.html">Day 1</a>
+    <a href="day2.html">Day 2</a>
+    <a href="day3.html">Day 3</a>
+    <a href="day4.html">Day 4</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="weather-icons">🌦 ☁️ ⛅ 🌈</div>
+  <h1>Weather &amp; Climate</h1>
+  <p>Your 4-day study guide! Work through each day to get ready for your test. ⭐</p>
+</div>
+
+<div class="container">
+  <div class="day-cards">
+
+    <a href="day1.html" class="day-card d1">
+      <div class="day-num">1</div>
+      <h3>Weather vs Climate &amp; Instruments</h3>
+      <p>Thermometers, barometers, measuring units &amp; more</p>
+      <div class="progress-bar"><div class="progress-fill" id="prog1" style="width:0%"></div></div>
+    </a>
+
+    <a href="day2.html" class="day-card d2">
+      <div class="day-num">2</div>
+      <h3>Clouds &amp; Types of Rainfall</h3>
+      <p>Convectional, relief and frontal rainfall</p>
+      <div class="progress-bar"><div class="progress-fill" id="prog2" style="width:0%"></div></div>
+    </a>
+
+    <a href="day3.html" class="day-card d3">
+      <div class="day-num">3</div>
+      <h3>Air Pressure &amp; Weather</h3>
+      <p>High pressure, low pressure, seasonal effects</p>
+      <div class="progress-bar"><div class="progress-fill" id="prog3" style="width:0%"></div></div>
+    </a>
+
+    <a href="day4.html" class="day-card d4">
+      <div class="day-num">4</div>
+      <h3>Factors Influencing Climate</h3>
+      <p>Latitude, altitude, sea, wind &amp; climate graphs</p>
+      <div class="progress-bar"><div class="progress-fill" id="prog4" style="width:0%"></div></div>
+    </a>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    [1,2,3,4].forEach(d => {
+      const pct = getDayProgress('day' + d);
+      const el = document.getElementById('prog' + d);
+      if (el) el.style.width = pct + '%';
+    });
+  });
+</script>
+</body>
+</html>

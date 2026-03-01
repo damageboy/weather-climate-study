@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 4 – Climate Factors &amp; Climate Graphs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-day="day4">
+
+<nav>
+  <a class="logo" href="index.html">🌤 Weather &amp; Climate</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="day1.html">Day 1</a>
+    <a href="day2.html">Day 2</a>
+    <a href="day3.html">Day 3</a>
+    <a href="day4.html">Day 4</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="day-badge" style="background:var(--day4)">Day 4</span>
+  <h1>Factors Influencing Climate &amp; Climate Graphs</h1>
+  <p>Why is Egypt hotter than the UK? Why is the west coast wetter? Find out today!</p>
+  <div style="max-width:400px;margin:16px auto 0;background:#ddd;border-radius:6px;height:10px;overflow:hidden">
+    <div class="day-progress-fill" style="height:100%;width:0%;background:var(--day4);border-radius:6px;transition:width 0.5s"></div>
+  </div>
+  <p style="font-size:0.85rem;color:#888;margin-top:4px">Progress: <span class="day-progress-pct">0%</span></p>
+</div>
+
+<div class="container">
+
+  <div class="section-title"><span class="icon">📖</span> Learn — Factors That Affect Climate</div>
+
+  <div class="card-grid">
+    <div class="info-card">
+      <div class="card-icon">🌍</div>
+      <h3>Latitude</h3>
+      <p>The <strong>main factor</strong>. Further from the equator → cooler. The Earth is curved, so the sun's rays spread over a larger area at higher latitudes. That's why the UK is cooler than Egypt.</p>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">⛰️</div>
+      <h3>Altitude</h3>
+      <p>Higher above sea level → colder. Temperature drops by about <strong>1°C for every 100 m</strong> you climb. Ben Nevis (1344 m) has snow in summer!</p>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">🌊</div>
+      <h3>Distance from the Sea</h3>
+      <p>The sea warms and cools slowly. <strong>Coastal areas</strong>: cooler in summer, warmer in winter than inland. A sea breeze cools the coast in summer.</p>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">💨</div>
+      <h3>Prevailing Wind</h3>
+      <p>The UK's prevailing wind blows from the <strong>south-west</strong>. It picks up moisture from the Atlantic → brings rain, especially to the west coast.</p>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">🌀</div>
+      <h3>Ocean Currents</h3>
+      <p>The <strong>North Atlantic Drift</strong> (a warm ocean current) flows past the UK's west coast. It warms the wind, keeping winters milder than they would otherwise be.</p>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">🏙️</div>
+      <h3>Other Local Factors</h3>
+      <p><strong>Shelter</strong> (hills blocking wind), <strong>urban heat islands</strong> (cities are warmer due to heat from buildings and traffic).</p>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="icon">📊</span> Climate Graphs</div>
+  <div class="definition-box" style="border-color:var(--day4)">
+    <h3>How to read a climate graph</h3>
+    <p>A climate graph shows <strong>average monthly temperature</strong> (as a <span style="color:#FF6B35;font-weight:700">red/orange line</span>) and <strong>average monthly rainfall</strong> (as <span style="color:#4A90D9;font-weight:700">blue bars</span>) for a place across 12 months.<br><br>
+    Temperature is read on the <strong>right</strong> y-axis (°C). Rainfall is read on the <strong>left</strong> y-axis (mm).</p>
+  </div>
+
+  <div class="climate-graph-wrap" style="margin-bottom:24px">
+    <canvas id="londonChart" height="120"></canvas>
+  </div>
+
+  <div class="activity" id="graph-questions">
+    <h2>📊 Read the London Climate Graph</h2>
+    <p class="instructions">Use the graph above to answer these questions — type your answers and press Check.</p>
+    <div class="fitb-list">
+      <div class="fitb-item">The hottest month in London is <input class="fitb-input" data-answer="July/August" style="width:100px" placeholder="???">.</div>
+      <div class="fitb-item">The coldest month is <input class="fitb-input" data-answer="January" style="width:100px" placeholder="???">.</div>
+      <div class="fitb-item">The wettest month is <input class="fitb-input" data-answer="October/November" style="width:130px" placeholder="???">.</div>
+      <div class="fitb-item">The approximate maximum temperature in July is about <input class="fitb-input" data-answer="18/19/17" style="width:60px" placeholder="??"> °C.</div>
+      <div class="fitb-item">Does London get more rain in summer or winter? <input class="fitb-input" data-answer="winter" style="width:80px" placeholder="???">.</div>
+    </div>
+    <div class="btn-row"><button class="btn btn-primary btn-check">Check answers</button></div>
+  </div>
+
+  <div class="section-title"><span class="icon">🧩</span> Practice</div>
+
+  <div class="activity" id="dnd4">
+    <h2>🔗 Match the Factor to its Effect</h2>
+    <p class="instructions">Drag each climate factor to the correct effect.</p>
+    <div class="dnd-area">
+      <div class="dnd-chips">
+        <div class="chip" data-chip="latitude" draggable="true">Latitude</div>
+        <div class="chip" data-chip="altitude" draggable="true">Altitude</div>
+        <div class="chip" data-chip="sea" draggable="true">Distance from sea</div>
+        <div class="chip" data-chip="wind" draggable="true">Prevailing wind</div>
+        <div class="chip" data-chip="current" draggable="true">Ocean currents</div>
+      </div>
+      <div class="dnd-targets">
+        <div class="dnd-target"><span class="target-label">Further from equator = cooler</span><div class="drop-zone" data-target="latitude">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">1°C colder per 100 m climbed</span><div class="drop-zone" data-target="altitude">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Coasts cooler in summer, warmer in winter</span><div class="drop-zone" data-target="sea">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">SW wind brings moisture to UK west coast</span><div class="drop-zone" data-target="wind">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">North Atlantic Drift warms UK winters</span><div class="drop-zone" data-target="current">drop here</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity" id="fc4">
+    <h2>🃏 Flashcards</h2>
+    <p class="instructions">Click to flip. Arrows to navigate.</p>
+    <div class="flashcard-deck">
+      <div class="flashcard-viewport">
+        <div class="flashcard-wrap">
+          <div class="flashcard">
+            <div class="flashcard-front"><span></span></div>
+            <div class="flashcard-back"><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flashcard-nav">
+        <button class="btn btn-primary btn-prev">← Prev</button>
+        <span class="fc-counter">1 / 9</span>
+        <button class="btn btn-primary btn-next">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="icon">✏️</span> Test Yourself</div>
+
+  <div class="activity" id="fitb4">
+    <h2>✍️ Fill in the Blanks</h2>
+    <p class="instructions">Complete each sentence.</p>
+    <div class="fitb-list">
+      <div class="fitb-item">The main factor affecting climate is <input class="fitb-input" data-answer="latitude" placeholder="???">. The further from the equator, the <input class="fitb-input" data-answer="colder" placeholder="???"> it gets.</div>
+      <div class="fitb-item">Temperature falls by about <input class="fitb-input" data-answer="1°C/1" placeholder="???"> for every <input class="fitb-input" data-answer="100" placeholder="???"> metres you climb in altitude.</div>
+      <div class="fitb-item">The sea warms and cools more <input class="fitb-input" data-answer="slowly" placeholder="???"> than the land. This means coastal areas are <input class="fitb-input" data-answer="cooler" placeholder="???"> in summer and warmer in winter than inland areas.</div>
+      <div class="fitb-item">The UK's prevailing wind is from the <input class="fitb-input" data-answer="south-west/SW" placeholder="???">. This brings rain because it picks up moisture from the <input class="fitb-input" data-answer="Atlantic" placeholder="???"> Ocean.</div>
+      <div class="fitb-item">The <input class="fitb-input" data-answer="North Atlantic Drift" placeholder="???"> is a warm ocean current that keeps UK winters <input class="fitb-input" data-answer="milder/warmer" placeholder="???"> than expected.</div>
+    </div>
+    <div class="btn-row"><button class="btn btn-primary btn-check">Check answers</button></div>
+  </div>
+
+  <div class="activity" id="quiz4">
+    <h2>❓ Quick Quiz</h2>
+    <p class="instructions">Select the best answer.</p>
+
+    <div class="quiz-question" data-q="0">
+      <div class="q-text">1. Why is Egypt hotter than the UK?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Egypt is closer to the sea</button>
+        <button class="quiz-option">Egypt is closer to the equator, so the sun's rays are more concentrated</button>
+        <button class="quiz-option">Egypt has higher altitude</button>
+        <button class="quiz-option">Egypt has stronger prevailing winds</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="1">
+      <div class="q-text">2. By how much does temperature fall for every 100 m increase in altitude?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">5°C</button>
+        <button class="quiz-option">0.1°C</button>
+        <button class="quiz-option">1°C</button>
+        <button class="quiz-option">10°C</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="2">
+      <div class="q-text">3. Why are coastal areas warmer than inland areas in winter?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">The sea releases stored heat slowly, keeping nearby land warmer</button>
+        <button class="quiz-option">The sea reflects more sunlight in winter</button>
+        <button class="quiz-option">Coastal areas are at lower altitude</button>
+        <button class="quiz-option">Coastal areas have more cloud cover</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="3">
+      <div class="q-text">4. What is the North Atlantic Drift?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">A type of rainfall</button>
+        <button class="quiz-option">A prevailing wind</button>
+        <button class="quiz-option">A warm ocean current that warms the UK's west coast</button>
+        <button class="quiz-option">A cold ocean current from the Arctic</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="4">
+      <div class="q-text">5. On a climate graph, what does the line graph show?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Monthly rainfall in mm</button>
+        <button class="quiz-option">Average monthly temperature in °C</button>
+        <button class="quiz-option">Wind speed in mph</button>
+        <button class="quiz-option">Hours of sunshine per month</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="5">
+      <div class="q-text">6. Why does the west coast of the UK receive more rainfall than the east coast?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">It is further from the equator</button>
+        <button class="quiz-option">It is at higher altitude</button>
+        <button class="quiz-option">The south-westerly prevailing wind brings moist Atlantic air which hits the western hills first</button>
+        <button class="quiz-option">Ocean currents bring cold water to the west</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="complete-banner" id="completeBanner">
+    <h3>🎉 You've completed all 4 days!</h3>
+    <p>Amazing work! You're ready for your test. Good luck! 🌟</p>
+  </div>
+
+  <div style="text-align:center;margin-top:30px;display:flex;gap:12px;justify-content:center">
+    <a href="day3.html" class="btn btn-primary">← Day 3</a>
+    <a href="index.html" class="btn btn-success">Back to Home 🏠</a>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script src="app.js"></script>
+<script>
+renderClimateGraph(
+  'londonChart',
+  'London — Average Monthly Climate',
+  ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+  [5, 5, 8, 11, 14, 17, 19, 19, 16, 12, 8, 5],
+  [55, 40, 42, 45, 48, 45, 45, 47, 50, 60, 60, 55]
+);
+
+initFitb('graph-questions', 'day4', 'graph');
+
+const D4_PAIRS = [
+  { chip: 'latitude', target: 'latitude' },
+  { chip: 'altitude', target: 'altitude' },
+  { chip: 'sea',      target: 'sea'      },
+  { chip: 'wind',     target: 'wind'     },
+  { chip: 'current',  target: 'current'  },
+];
+initDragDrop('dnd4', D4_PAIRS, 'day4', 'dnd');
+
+const D4_CARDS = [
+  { front: 'Latitude', back: 'The main climate factor. Further from the equator = cooler, because sun rays spread over a larger area.' },
+  { front: 'Altitude', back: 'Higher = colder. Temperature drops 1°C for every 100 metres above sea level.' },
+  { front: 'Distance from the sea', back: 'Sea warms/cools slowly. Coastal areas are cooler in summer, warmer in winter than inland.' },
+  { front: 'Prevailing wind (UK)', back: 'South-westerly. Brings moisture from the Atlantic. West coast gets most rain.' },
+  { front: 'North Atlantic Drift', back: 'Warm ocean current flowing past the UK\'s west coast. Keeps winters milder.' },
+  { front: 'Urban heat island', back: 'Cities are warmer than the countryside because roads, buildings and cars release heat.' },
+  { front: 'Rain shadow', back: 'The dry leeward side of a mountain that gets little rain because moist air already rained on the windward side.' },
+  { front: 'Climate graph — bars', back: 'Blue bars = average monthly rainfall in millimetres (mm). Read on the LEFT y-axis.' },
+  { front: 'Climate graph — line', back: 'Orange/red line = average monthly temperature in °C. Read on the RIGHT y-axis.' },
+];
+initFlashcards('fc4', D4_CARDS, 'day4', 'flashcards');
+initFitb('fitb4', 'day4', 'fitb');
+
+const D4_Q = [
+  { q:'', options:[], answer: 1 },
+  { q:'', options:[], answer: 2 },
+  { q:'', options:[], answer: 0 },
+  { q:'', options:[], answer: 2 },
+  { q:'', options:[], answer: 1 },
+  { q:'', options:[], answer: 2 },
+];
+initQuiz('quiz4', D4_Q, 'day4', 'quiz');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const allDone = [1,2,3,4].every(d => getDayProgress('day' + d) >= 50);
+  if (allDone) document.getElementById('completeBanner').classList.add('show');
+});
+</script>
+</body>
+</html>

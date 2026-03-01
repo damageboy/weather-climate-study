@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 3 – Air Pressure &amp; Weather</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-day="day3">
+
+<nav>
+  <a class="logo" href="index.html">🌤 Weather &amp; Climate</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="day1.html">Day 1</a>
+    <a href="day2.html">Day 2</a>
+    <a href="day3.html">Day 3</a>
+    <a href="day4.html">Day 4</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="day-badge" style="background:var(--day3)">Day 3</span>
+  <h1>Air Pressure &amp; Weather</h1>
+  <p>Discover how air pressure shapes the weather — from sunny days to stormy nights.</p>
+  <div style="max-width:400px;margin:16px auto 0;background:#ddd;border-radius:6px;height:10px;overflow:hidden">
+    <div class="day-progress-fill" style="height:100%;width:0%;background:var(--day3);border-radius:6px;transition:width 0.5s"></div>
+  </div>
+  <p style="font-size:0.85rem;color:#888;margin-top:4px">Progress: <span class="day-progress-pct">0%</span></p>
+</div>
+
+<div class="container">
+
+  <div class="section-title"><span class="icon">📖</span> Learn</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <div class="panel" style="border-top:4px solid #4A90D9">
+      <h3>🔵 Low Pressure</h3>
+      <ul class="steps">
+        <li data-n="1">Warm air <strong>rises</strong> at the centre.</li>
+        <li data-n="2">Rising air cools → clouds form.</li>
+        <li data-n="3">Clouds bring <strong>rain</strong> and <strong>wind</strong>.</li>
+        <li data-n="4">A <strong>falling barometer</strong> signals low pressure coming.</li>
+      </ul>
+      <p style="margin-top:10px;font-size:0.88rem;background:#e8f4fd;padding:8px;border-radius:8px">
+        Low pressure = <strong>unsettled, stormy, windy, rainy</strong> weather.
+      </p>
+    </div>
+    <div class="panel" style="border-top:4px solid #FF9800">
+      <h3>🔴 High Pressure</h3>
+      <ul class="steps">
+        <li data-n="1">Cold air <strong>sinks</strong> at the centre.</li>
+        <li data-n="2">Sinking air warms → no condensation.</li>
+        <li data-n="3"><strong>No clouds</strong> form → clear, dry skies.</li>
+        <li data-n="4">A <strong>rising barometer</strong> signals high pressure coming.</li>
+      </ul>
+      <p style="margin-top:10px;font-size:0.88rem;background:#fff8e1;padding:8px;border-radius:8px">
+        High pressure = <strong>settled, dry, calm</strong> weather.
+      </p>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1.1rem;margin-top:16px"><span class="icon">☀️</span> High Pressure in Summer</div>
+  <div class="card-grid" style="grid-template-columns:repeat(auto-fill,minmax(170px,1fr))">
+    <div class="info-card"><div class="card-icon">☀️</div><h3>Hot sunny days</h3><p>No clouds to block the sun.</p></div>
+    <div class="info-card"><div class="card-icon">💧</div><h3>Dew at night</h3><p>No cloud blanket → ground cools fast → water vapour condenses on grass.</p></div>
+    <div class="info-card"><div class="card-icon">🌵</div><h3>Drought</h3><p>Long periods of no rain can cause drought.</p></div>
+    <div class="info-card"><div class="card-icon">⛈️</div><h3>Thunderstorms</h3><p>Very hot inland days → air rises rapidly → huge black clouds → thunderstorms and flooding.</p></div>
+  </div>
+
+  <div class="section-title" style="font-size:1.1rem"><span class="icon">❄️</span> High Pressure in Winter</div>
+  <div class="card-grid" style="grid-template-columns:repeat(auto-fill,minmax(170px,1fr))">
+    <div class="info-card"><div class="card-icon">🌨️</div><h3>Frost</h3><p>No cloud blanket → ground cools rapidly at night → water vapour freezes on surfaces.</p></div>
+    <div class="info-card"><div class="card-icon">🌫️</div><h3>Fog</h3><p>Water vapour condenses on dust and tiny particles in the air → thick fog, dangerous driving.</p></div>
+    <div class="info-card"><div class="card-icon">🧊</div><h3>Ice</h3><p>Water on roads freezes as the sun goes down.</p></div>
+    <div class="info-card"><div class="card-icon">😊</div><h3>Clear cold days</h3><p>No cloud → clear blue skies but very cold temperatures.</p></div>
+  </div>
+
+  <div class="section-title"><span class="icon">🧩</span> Practice</div>
+
+  <div class="activity" id="dnd3">
+    <h2>🔗 Sort the Weather</h2>
+    <p class="instructions">Drag each weather type to either Low Pressure or High Pressure.</p>
+    <div class="dnd-area">
+      <div class="dnd-chips">
+        <div class="chip" data-chip="rain" draggable="true">Heavy rain 🌧️</div>
+        <div class="chip" data-chip="clear" draggable="true">Clear blue skies ☀️</div>
+        <div class="chip" data-chip="wind" draggable="true">Strong winds 💨</div>
+        <div class="chip" data-chip="frost" draggable="true">Frost &amp; fog ❄️</div>
+        <div class="chip" data-chip="clouds" draggable="true">Lots of clouds ☁️</div>
+        <div class="chip" data-chip="drought" draggable="true">Drought 🌵</div>
+      </div>
+      <div class="dnd-targets">
+        <div class="dnd-target"><span class="target-label">🔵 Low Pressure</span><div class="drop-zone" data-target="rain">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">🔵 Low Pressure</span><div class="drop-zone" data-target="wind">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">🔵 Low Pressure</span><div class="drop-zone" data-target="clouds">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">🔴 High Pressure</span><div class="drop-zone" data-target="clear">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">🔴 High Pressure</span><div class="drop-zone" data-target="frost">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">🔴 High Pressure</span><div class="drop-zone" data-target="drought">drop here</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity" id="fc3">
+    <h2>🃏 Flashcards</h2>
+    <p class="instructions">Click to flip each card. Arrow buttons to navigate.</p>
+    <div class="flashcard-deck">
+      <div class="flashcard-viewport">
+        <div class="flashcard-wrap">
+          <div class="flashcard">
+            <div class="flashcard-front"><span></span></div>
+            <div class="flashcard-back"><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flashcard-nav">
+        <button class="btn btn-primary btn-prev">← Prev</button>
+        <span class="fc-counter">1 / 8</span>
+        <button class="btn btn-primary btn-next">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="icon">✏️</span> Test Yourself</div>
+
+  <div class="activity" id="fitb3">
+    <h2>✍️ Fill in the Blanks</h2>
+    <p class="instructions">Complete each sentence.</p>
+    <div class="fitb-list">
+      <div class="fitb-item">If air pressure is <strong>low</strong>, it means air is <input class="fitb-input" data-answer="rising" placeholder="???">. This leads to clouds and <input class="fitb-input" data-answer="rain" placeholder="???">.</div>
+      <div class="fitb-item">If air pressure is <strong>high</strong>, it means air is <input class="fitb-input" data-answer="sinking" placeholder="???">. This means <input class="fitb-input" data-answer="no clouds/clear skies" placeholder="???"> and dry weather.</div>
+      <div class="fitb-item">A <input class="fitb-input" data-answer="barometer" placeholder="???"> is used to measure air pressure. A falling barometer means <input class="fitb-input" data-answer="rain/bad weather" placeholder="???"> is on the way.</div>
+      <div class="fitb-item">In summer, high pressure brings <input class="fitb-input" data-answer="hot/sunny" placeholder="???"> weather. At night, no cloud means the ground cools fast, causing <input class="fitb-input" data-answer="dew" placeholder="???"> to form.</div>
+      <div class="fitb-item">In winter, high pressure brings clear, cold days. At night, water vapour freezes on surfaces to give <input class="fitb-input" data-answer="frost" placeholder="???"> and condenses on dust particles to give <input class="fitb-input" data-answer="fog" placeholder="???">.</div>
+    </div>
+    <div class="btn-row"><button class="btn btn-primary btn-check">Check answers</button></div>
+  </div>
+
+  <div class="activity" id="quiz3">
+    <h2>❓ Quick Quiz</h2>
+    <p class="instructions">Choose the best answer.</p>
+
+    <div class="quiz-question" data-q="0">
+      <div class="q-text">1. What type of weather does low air pressure bring?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Hot, sunny, dry</button>
+        <button class="quiz-option">Cold, frosty, clear</button>
+        <button class="quiz-option">Cloudy, rainy, windy</button>
+        <button class="quiz-option">Calm, foggy, cold</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="1">
+      <div class="q-text">2. In low pressure, what happens to the air?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">It sinks</button>
+        <button class="quiz-option">It rises</button>
+        <button class="quiz-option">It stays at the same height</button>
+        <button class="quiz-option">It moves sideways only</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="2">
+      <div class="q-text">3. What is dew?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Frozen rain</button>
+        <button class="quiz-option">Water vapour that condensed on cold surfaces overnight</button>
+        <button class="quiz-option">A type of fog</button>
+        <button class="quiz-option">Condensation inside clouds</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="3">
+      <div class="q-text">4. Why does high pressure in winter cause frost?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Because the wind blows snow from elsewhere</button>
+        <button class="quiz-option">Because there is no cloud blanket to trap heat, so the ground cools rapidly at night</button>
+        <button class="quiz-option">Because high pressure always brings snow</button>
+        <button class="quiz-option">Because the sun is too weak in winter to melt ice</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="4">
+      <div class="q-text">5. What does a rising barometer tell you?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Stormy weather is on the way</button>
+        <button class="quiz-option">Temperature is increasing</button>
+        <button class="quiz-option">Air pressure is increasing — fair weather coming</button>
+        <button class="quiz-option">Wind speed is increasing</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="5">
+      <div class="q-text">6. Which summer high pressure weather can cause flooding?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Fog</button>
+        <button class="quiz-option">Frost</button>
+        <button class="quiz-option">Thunderstorms from rapidly rising hot air inland</button>
+        <button class="quiz-option">Sea breezes</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:30px;display:flex;gap:12px;justify-content:center">
+    <a href="day2.html" class="btn btn-primary">← Day 2</a>
+    <a href="day4.html" class="btn btn-success">Day 4 →</a>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+<script>
+const D3_PAIRS = [
+  { chip: 'rain',    target: 'rain'   },
+  { chip: 'wind',    target: 'wind'   },
+  { chip: 'clouds',  target: 'clouds' },
+  { chip: 'clear',   target: 'clear'  },
+  { chip: 'frost',   target: 'frost'  },
+  { chip: 'drought', target: 'drought'},
+];
+initDragDrop('dnd3', D3_PAIRS, 'day3', 'dnd');
+
+const D3_CARDS = [
+  { front: 'Low pressure', back: 'Air is rising. Brings clouds, rain and wind. Unsettled weather. Barometer falls.' },
+  { front: 'High pressure', back: 'Air is sinking. No clouds form. Dry, calm weather. Barometer rises.' },
+  { front: 'Barometer', back: 'Instrument that measures air pressure in millibars. Falling = rain, Rising = fair weather.' },
+  { front: 'High pressure in summer', back: 'Hot sunny days, dew at night, possible drought, thunderstorms inland.' },
+  { front: 'High pressure in winter', back: 'Clear cold days, frost, fog, ice on roads. No cloud to keep heat in.' },
+  { front: 'Frost', back: 'Forms when water vapour freezes on cold surfaces overnight. Common in winter high pressure.' },
+  { front: 'Fog', back: 'Water vapour condenses on tiny dust particles in the air. Makes driving dangerous.' },
+  { front: 'Dew', back: 'Water vapour that condenses on grass and surfaces when they cool at night.' },
+];
+initFlashcards('fc3', D3_CARDS, 'day3', 'flashcards');
+initFitb('fitb3', 'day3', 'fitb');
+
+const D3_Q = [
+  { q:'', options:[], answer: 2 },
+  { q:'', options:[], answer: 1 },
+  { q:'', options:[], answer: 1 },
+  { q:'', options:[], answer: 1 },
+  { q:'', options:[], answer: 2 },
+  { q:'', options:[], answer: 2 },
+];
+initQuiz('quiz3', D3_Q, 'day3', 'quiz');
+</script>
+</body>
+</html>

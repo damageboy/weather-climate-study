@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 2 – Clouds &amp; Rainfall</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-day="day2">
+
+<nav>
+  <a class="logo" href="index.html">🌤 Weather &amp; Climate</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="day1.html">Day 1</a>
+    <a href="day2.html">Day 2</a>
+    <a href="day3.html">Day 3</a>
+    <a href="day4.html">Day 4</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <span class="day-badge" style="background:var(--day2)">Day 2</span>
+  <h1>Clouds &amp; The Three Types of Rainfall</h1>
+  <p>Learn how clouds form and why rain falls in three different ways.</p>
+  <div style="max-width:400px;margin:16px auto 0;background:#ddd;border-radius:6px;height:10px;overflow:hidden">
+    <div class="day-progress-fill" style="height:100%;width:0%;background:var(--day2);border-radius:6px;transition:width 0.5s"></div>
+  </div>
+  <p style="font-size:0.85rem;color:#888;margin-top:4px">Progress: <span class="day-progress-pct">0%</span></p>
+</div>
+
+<div class="container">
+
+  <div class="section-title"><span class="icon">📖</span> Learn</div>
+
+  <div class="section-title" style="font-size:1.1rem;margin-top:10px"><span class="icon">☁️</span> Cloud Types</div>
+  <div class="card-grid">
+    <div class="info-card">
+      <div class="card-icon">⛅</div>
+      <h3>Cumulus</h3>
+      <p>Fluffy white clouds, <strong>low</strong> in the sky. Can grow tall and dark. Bring <strong>short heavy showers</strong>.</p>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">🌫️</div>
+      <h3>Stratus</h3>
+      <p>Big blankets of <strong>dull grey cloud</strong> hanging low. Cover the whole sky. Give a <strong>light drizzle</strong> but no real showers.</p>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">🌀</div>
+      <h3>Cirrus</h3>
+      <p>Thin wispy clouds very <strong>high up</strong> (over 6 km). So cold they are made of <strong>ice crystals</strong>. Mean bad weather is coming.</p>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size:1.1rem"><span class="icon">🌧️</span> Three Types of Rainfall</div>
+
+  <div class="panel" style="border-top: 4px solid #FF9800">
+    <h3>☀️ Convectional Rainfall</h3>
+    <ul class="steps">
+      <li data-n="1">The sun heats the ground, which warms the air above it.</li>
+      <li data-n="2">Warm air rises in <strong>convection currents</strong>.</li>
+      <li data-n="3">Rising air cools. Water vapour <strong>condenses</strong> to form clouds.</li>
+      <li data-n="4">Clouds grow and it rains.</li>
+    </ul>
+    <p style="margin-top:10px;font-size:0.88rem;color:#777">Common in <strong>summer</strong>, inland areas, far from the sea — where the ground gets hottest.</p>
+  </div>
+
+  <div class="panel" style="border-top: 4px solid #4CAF50">
+    <h3>⛰️ Relief Rainfall</h3>
+    <ul class="steps">
+      <li data-n="1">Moist air (often from the ocean) blows towards a mountain or hill.</li>
+      <li data-n="2">The air is <strong>forced to rise</strong> over the mountain.</li>
+      <li data-n="3">As it rises, it cools. Water vapour condenses → clouds form → it rains on the <strong>windward</strong> side.</li>
+      <li data-n="4">The air descends on the other side (<strong>leeward</strong> / rain shadow) and warms — so it stays dry.</li>
+    </ul>
+    <p style="margin-top:10px;font-size:0.88rem;color:#777">In the UK the prevailing wind is from the south-west, so the <strong>west coast</strong> gets lots of relief rainfall.</p>
+  </div>
+
+  <div class="panel" style="border-top: 4px solid #4A90D9">
+    <h3>🌬️ Frontal Rainfall</h3>
+    <ul class="steps">
+      <li data-n="1">A warm <strong>air mass</strong> meets a cold air mass.</li>
+      <li data-n="2">The warm air is lighter, so it slides <strong>up and over</strong> the cold air.</li>
+      <li data-n="3">As the warm air rises, it cools. Water vapour condenses → clouds form → it rains.</li>
+      <li data-n="4">Frontal rain can fall almost <strong>anywhere</strong>. In the UK it's common from Atlantic air masses.</li>
+    </ul>
+  </div>
+
+  <div class="section-title"><span class="icon">🧩</span> Practice</div>
+
+  <div class="activity" id="dnd2">
+    <h2>🔗 Match the Rainfall Type</h2>
+    <p class="instructions">Drag each cause to the correct rainfall type.</p>
+    <div class="dnd-area">
+      <div class="dnd-chips">
+        <div class="chip" data-chip="sun-heats" draggable="true">Sun heats ground → air rises</div>
+        <div class="chip" data-chip="mountain" draggable="true">Air forced up over mountains</div>
+        <div class="chip" data-chip="warm-cold" draggable="true">Warm air mass meets cold air mass</div>
+        <div class="chip" data-chip="convection" draggable="true">Convection currents inland</div>
+        <div class="chip" data-chip="windward" draggable="true">Windward side gets rain</div>
+        <div class="chip" data-chip="air-mass" draggable="true">Air masses meet at a front</div>
+      </div>
+      <div class="dnd-targets">
+        <div class="dnd-target"><span class="target-label">Convectional ☀️</span><div class="drop-zone" data-target="sun-heats">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Convectional ☀️</span><div class="drop-zone" data-target="convection">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Relief ⛰️</span><div class="drop-zone" data-target="mountain">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Relief ⛰️</span><div class="drop-zone" data-target="windward">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Frontal 🌬️</span><div class="drop-zone" data-target="warm-cold">drop here</div></div>
+        <div class="dnd-target"><span class="target-label">Frontal 🌬️</span><div class="drop-zone" data-target="air-mass">drop here</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="activity" id="fc2">
+    <h2>🃏 Flashcards</h2>
+    <p class="instructions">Click a card to flip it. Use the arrows to go through all cards.</p>
+    <div class="flashcard-deck">
+      <div class="flashcard-viewport">
+        <div class="flashcard-wrap">
+          <div class="flashcard">
+            <div class="flashcard-front"><span></span></div>
+            <div class="flashcard-back"><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flashcard-nav">
+        <button class="btn btn-primary btn-prev">← Prev</button>
+        <span class="fc-counter">1 / 9</span>
+        <button class="btn btn-primary btn-next">Next →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title"><span class="icon">✏️</span> Test Yourself</div>
+
+  <div class="activity" id="fitb2">
+    <h2>✍️ Fill in the Blanks</h2>
+    <p class="instructions">Complete each sentence with the missing word(s).</p>
+    <div class="fitb-list">
+      <div class="fitb-item">Cirrus clouds are made of <input class="fitb-input" data-answer="ice crystals" placeholder="???"> because they form so high up where it is freezing.</div>
+      <div class="fitb-item"><input class="fitb-input" data-answer="Stratus" placeholder="???"> clouds form a grey blanket and give a light <input class="fitb-input" data-answer="drizzle" placeholder="???">.</div>
+      <div class="fitb-item">In convectional rainfall, the sun heats the <input class="fitb-input" data-answer="ground" placeholder="???"> which warms the air above it, causing it to <input class="fitb-input" data-answer="rise" placeholder="???">.</div>
+      <div class="fitb-item">In relief rainfall, the <input class="fitb-input" data-answer="windward" placeholder="???"> side of a mountain gets rain, while the <input class="fitb-input" data-answer="leeward" placeholder="???"> side stays dry (called a rain shadow).</div>
+      <div class="fitb-item">Frontal rainfall occurs when a warm air mass slides up over a <input class="fitb-input" data-answer="cold" placeholder="???"> air mass at a <input class="fitb-input" data-answer="front" placeholder="???">.</div>
+      <div class="fitb-item">The UK's prevailing wind comes from the <input class="fitb-input" data-answer="south-west/SW" placeholder="???"> bringing moisture from the <input class="fitb-input" data-answer="Atlantic" placeholder="???"> Ocean.</div>
+    </div>
+    <div class="btn-row"><button class="btn btn-primary btn-check">Check answers</button></div>
+  </div>
+
+  <div class="activity" id="quiz2">
+    <h2>❓ Quick Quiz</h2>
+    <p class="instructions">Select the best answer for each question.</p>
+
+    <div class="quiz-question" data-q="0">
+      <div class="q-text">1. Which cloud type is made of ice crystals?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Cumulus</button>
+        <button class="quiz-option">Stratus</button>
+        <button class="quiz-option">Cirrus</button>
+        <button class="quiz-option">Nimbus</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="1">
+      <div class="q-text">2. What causes convectional rainfall?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Warm air forced up over mountains</button>
+        <button class="quiz-option">The sun heating the ground, making air rise</button>
+        <button class="quiz-option">A warm air mass meeting a cold air mass</button>
+        <button class="quiz-option">Ocean currents cooling the air</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="2">
+      <div class="q-text">3. In relief rainfall, which side of a mountain gets the rain?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">The leeward (sheltered) side</button>
+        <button class="quiz-option">The windward (facing the wind) side</button>
+        <button class="quiz-option">The summit only</button>
+        <button class="quiz-option">Both sides equally</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="3">
+      <div class="q-text">4. What happens to warm air when it meets cold air in frontal rainfall?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">It sinks below the cold air</button>
+        <button class="quiz-option">It stays at the same level</button>
+        <button class="quiz-option">It slides up and over the cold air</button>
+        <button class="quiz-option">It evaporates</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="4">
+      <div class="q-text">5. Which cloud type brings short, heavy showers?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">Cirrus</button>
+        <button class="quiz-option">Stratus</button>
+        <button class="quiz-option">Cumulus</button>
+        <button class="quiz-option">Fog</button>
+      </div>
+    </div>
+
+    <div class="quiz-question" data-q="5">
+      <div class="q-text">6. Why does the west coast of the UK get a lot of rain?</div>
+      <div class="quiz-options">
+        <button class="quiz-option">It is close to the equator</button>
+        <button class="quiz-option">The prevailing south-westerly wind brings moisture from the Atlantic Ocean</button>
+        <button class="quiz-option">It has very high altitude</button>
+        <button class="quiz-option">It always has low air pressure</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:30px;display:flex;gap:12px;justify-content:center">
+    <a href="day1.html" class="btn btn-primary">← Day 1</a>
+    <a href="day3.html" class="btn btn-success">Day 3 →</a>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+<script>
+const D2_PAIRS = [
+  { chip: 'sun-heats',  target: 'sun-heats'  },
+  { chip: 'mountain',   target: 'mountain'   },
+  { chip: 'warm-cold',  target: 'warm-cold'  },
+  { chip: 'convection', target: 'convection' },
+  { chip: 'windward',   target: 'windward'   },
+  { chip: 'air-mass',   target: 'air-mass'   },
+];
+initDragDrop('dnd2', D2_PAIRS, 'day2', 'dnd');
+
+const D2_CARDS = [
+  { front: 'Cumulus clouds', back: 'Fluffy, low clouds. Can bring short heavy showers. May grow tall and dark.' },
+  { front: 'Stratus clouds', back: 'Grey blanket of cloud, low in sky. Give a light drizzle but no heavy showers.' },
+  { front: 'Cirrus clouds', back: 'Thin wispy clouds very high up (>6 km). Made of ice crystals. Sign of bad weather coming.' },
+  { front: 'Convectional rainfall', back: 'Sun heats ground → air rises → cools → condenses → rain. Inland, summer.' },
+  { front: 'Relief rainfall', back: 'Moist air forced up over mountains → cools → rains on windward side. Leeward side = rain shadow.' },
+  { front: 'Frontal rainfall', back: 'Warm air mass meets cold air mass → warm air rises over cold → cools → rain.' },
+  { front: 'Windward side', back: 'The side of a mountain facing the wind. Gets the rain in relief rainfall.' },
+  { front: 'Leeward side', back: 'The sheltered side of a mountain. Stays dry — called the rain shadow.' },
+  { front: 'Why does west UK get most rain?', back: 'The prevailing south-westerly wind brings moist air from the Atlantic, which rises over hills.' },
+];
+initFlashcards('fc2', D2_CARDS, 'day2', 'flashcards');
+initFitb('fitb2', 'day2', 'fitb');
+
+const D2_Q = [
+  { q:'', options:[], answer: 2 },
+  { q:'', options:[], answer: 1 },
+  { q:'', options:[], answer: 1 },
+  { q:'', options:[], answer: 2 },
+  { q:'', options:[], answer: 2 },
+  { q:'', options:[], answer: 1 },
+];
+initQuiz('quiz2', D2_Q, 'day2', 'quiz');
+</script>
+</body>
+</html>
